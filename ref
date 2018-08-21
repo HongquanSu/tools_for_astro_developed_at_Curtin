@@ -1,0 +1,17 @@
+#!/usr/bin/python
+
+import sys
+import os
+
+
+def open_ads_page_use_three_num(year, volume, page):
+    link = 'http://adsabs.harvard.edu/cgi-bin/nph-abs_connect?version=1\&warnings=YES\&partial_bibcd=YES\&sort=BIBCODE\&db_key=ALL\&bibstem=\&year='+year+'\&volume='+volume+'\&page='+page+'\&nr_to_return=100&start_nr=1'
+    os.system('open -a "Google Chrome" '+link)
+
+
+if __name__ == '__main__':
+    year = sys.argv[1]
+    volume = sys.argv[2]
+    page = sys.argv[3]
+    open_ads_page_use_three_num(year=year, volume=volume, page=page)
+

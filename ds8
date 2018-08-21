@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# Use it in command line: ds8 name1.fits name2.fits
+ds8() {
+    if [ "$(uname)" = "Darwin" ]; then
+        /Applications/SAOImageDS9.app/Contents/MacOS/ds9 ${setting} &
+    else [ "$(uname)" = "Linux" ] 
+        ds9 ${setting} &
+    fi
+    }
+
+# revise this setting to make it personalize
+# more ds9 settings: http://ds9.si.edu/doc/ref/command.html                                    
+setting="-lock scale yes -wcs sky galactic -wcs skyformat degrees -scale mode 99.5 -match frame wcs -lock frame wcs "$@" -zoom to fit"
+
+ds8 
+
+
