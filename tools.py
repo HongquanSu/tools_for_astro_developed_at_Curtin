@@ -33,7 +33,6 @@ download_webpage
 filter_fits_table_template
 find_num_line_in_file
 gauss_kern
-gcd
 get_def_list
 get_fits_all_pix_statistics
 is_nan
@@ -872,21 +871,6 @@ def move_fits(filename, delta_l, delta_b, out_file='moved.fits'):
     hdulist.close()
 
 
-def gcd(ra1,dec1,ra2,dec2):
-    """
-    # copied from Paul Hancock as I remember
-    Great circle distance as calculated by the haversine formula
-    ra/dec in degrees
-    returns:
-    sep in degrees"""
-    dlon = ra2 - ra1
-    dlat = dec2 - dec1
-    a = np.sin(np.radians(dlat)/2)**2
-    a+= np.cos(np.radians(dec1)) * np.cos(np.radians(dec2)) * np.sin(np.radians(dlon)/2)**2
-    sep = np.degrees(2 * np.arcsin(min(1,np.sqrt(a))))
-    return sep
-
-
 def template_generate_ds9_reg(reg_ou):
     """
     generate a ds9 region file
@@ -1215,7 +1199,7 @@ def get_def_list():
 
 
 if __name__ == '__main__':
-    a = 1
-    # get_def_list()
-    a = cal_ionising_Lyman_continuum_photon_count(s_int=9800., dis=2.4, freq=0.088)
-    print(a)
+    # import the above def to your script, e.g, from tools import cut_fits
+
+    # print names of all definitions in this file
+    get_def_list()
