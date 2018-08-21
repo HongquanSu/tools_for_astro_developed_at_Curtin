@@ -10,11 +10,17 @@ cut_fits(fits_in=a.fits, fits_ou=b.fits, x=0, y=0, size_x=1, size_y=1)
 Note:
 
 This will make a cutout of a fits image using Cutout2D and save it to the given file
+
 fits_in: input filename of fits image
+
 fits_ou: output filename of fits image
+
 x: ra or galactic longitude of the image center in degrees
+
 y: dec or galactic latitude of the image center in degrees
+
 size_x: the width of the image in degrees
+
 size_y: the height of the image in degrees
 
 ### open a fits file using DS9 with your own setting ("-zoom to fit" works well)                                   
