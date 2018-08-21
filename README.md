@@ -2,7 +2,7 @@ This is a collection of short scripts for fits operation, coordinate transfer, e
 
 ## Examples
 
-### For the 53 functions defined in tools.py, below is an example to use cut_fits
+### For the 53 functions defined in tools.py, below is an example to use the function named cut_fits
 ```python
 from tools import cut_fits
 cut_fits(fits_in=a.fits, fits_ou=b.fits, x=0, y=0, size_x=1, size_y=1)
